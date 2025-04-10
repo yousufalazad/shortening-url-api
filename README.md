@@ -1,16 +1,16 @@
+
 URL Shortening API - README
 
 Introduction
 This is a simple URL shortening API built using PHP Laravel 11.
 
-
 Requirements
 To run this project, you need the following:
-	•	PHP 8.0 or higher
-	•	Composer
-	•	Laravel 11
-	•	MySQL
-	•	Postman (for API testing)
+- PHP 8.0 or higher
+- Composer
+- Laravel 11
+- MySQL
+- Postman (for API testing)
 
 Setup Instructions
 Follow the steps below to run this project on your local machine.
@@ -22,15 +22,20 @@ git clone https://github.com/yousufalazad/shortening-url-api.git
 
 2. Install Dependencies
 Navigate to the project directory and install the dependencies using Composer.
+
 cd shortening-url-api
 composer install
 
 3. Set Up the Environment File
 Copy the .env.example file to .env.
 
+cp .env.example .env
+
 4. Configure the Database
 Open the .env file and configure the database connection with your database credentials.
+
 Example:
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -47,37 +52,44 @@ php artisan migrate
 7. Start the Local Development Server
 php artisan serve
 
+This will start the server at http://localhost:8000.
 
 8. Test the API with Postman
 
 You can now test the API endpoints using Postman.
 
 Encode URL:
-	•	Endpoint: POST http://localhost:8000/api/shorten
-	•	Request Body (JSON):
+- Endpoint: POST http://localhost:8000/api/shorten
+- Request Body (JSON):
+
 {
   "original_url": "https://github.com/yousufalazad/shortening-url-api"
 }
 
-•	Response (JSON):
-    {
+- Response (JSON):
+
+{
   "shortened_url": "http://short.est/abcd12",
   "original_url": "https://github.com/yousufalazad/shortening-url-api"
 }
 
 Decode URL:
-	•	Endpoint: GET http://localhost:8000/api/decode/{shortenedUrl}
-	•	Replace {shortenedUrl} with the shortened part (e.g., abcd12).
-•	Response (JSON):
+- Endpoint: GET http://localhost:8000/api/decode/{shortenedUrl}
+  - Replace {shortenedUrl} with the shortened part (e.g., abcd12).
+
+- Response (JSON):
+
 {
   "original_url": "https://github.com/yousufalazad/shortening-url-api"
 }
 
 9. Conclusion
-
 Once you’ve followed these steps, the project should be running on your local machine. You can now shorten URLs and retrieve them using the API.
 
-Feel free to contact me if you need any further assistance 
+Feel free to contact me if you need any further assistance.
+
+---
+
 Yousuf Al Azad
-07538123775
-London
+Phone: 07538123775
+Location: London
