@@ -1,5 +1,5 @@
 
-URL Shortening API - README
+URL Shortening API for Assignment
 
 Introduction
 This is a simple URL shortening API built using PHP Laravel 11.
@@ -16,25 +16,18 @@ Setup Instructions
 Follow the steps below to run this project on your local machine.
 
 1. Clone the Repository
-First, clone the repository to your local machine.
-
 git clone https://github.com/yousufalazad/shortening-url-api.git
 
 2. Install Dependencies
-Navigate to the project directory and install the dependencies using Composer.
-
 cd shortening-url-api
 composer install
 
 3. Set Up the Environment File
-Copy the .env.example file to .env.
+Copy the .env.example file to .env
 
-cp .env.example .env
 
 4. Configure the Database
-Open the .env file and configure the database connection with your database credentials.
-
-Example:
+Configure the database
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -52,12 +45,8 @@ php artisan migrate
 7. Start the Local Development Server
 php artisan serve
 
-This will start the server at http://localhost:8000.
 
 8. Test the API with Postman
-
-You can now test the API endpoints using Postman.
-
 Encode URL:
 - Endpoint: POST http://localhost:8000/api/shorten
 - Request Body (JSON):
@@ -67,7 +56,6 @@ Encode URL:
 }
 
 - Response (JSON):
-
 {
   "shortened_url": "http://short.est/abcd12",
   "original_url": "https://github.com/yousufalazad/shortening-url-api"
@@ -78,18 +66,14 @@ Decode URL:
   - Replace {shortenedUrl} with the shortened part (e.g., abcd12).
 
 - Response (JSON):
-
 {
   "original_url": "https://github.com/yousufalazad/shortening-url-api"
 }
 
-9. Conclusion
-Once you’ve followed these steps, the project should be running on your local machine. You can now shorten URLs and retrieve them using the API.
-
 Feel free to contact me if you need any further assistance.
+Thank you
 
 ---
 
 Yousuf Al Azad
-Phone: 07538123775
-Location: London
+07538123775
